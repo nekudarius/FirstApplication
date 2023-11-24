@@ -1,13 +1,23 @@
 package com.vanhan.firstapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+import com.vanhan.firstapplication.base.BaseActivity;
+import com.vanhan.firstapplication.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public ActivityMainBinding binding() {
+        return ActivityMainBinding.inflate(getLayoutInflater());
+    }
+
+
+    @Override
+    public void onInitViews() {
+
+    }
+
+    @Override
+    public void onInitObservers() {
+
     }
 }
